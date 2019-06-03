@@ -1,0 +1,32 @@
+.User {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.User:hover, .User:active{
+    cursor:pointer;
+    background: rgba(0,0,0,0.2);
+}
+
+.User__pic {
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.User__details {
+    display: none;
+}
+
+@media (min-width: 576px){
+    .User__details {
+        display: block;
+        padding: 0 0 0 1.6rem;
+    }
+
+    .User__details-name {
+        margin: 0;
+        color: rgba(255,255,255,0.8);
+        font-size: 1.6rem;
+    }
+}
