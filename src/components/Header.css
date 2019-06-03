@@ -1,0 +1,8 @@
+.Header {
+    padding: 1.6rem 3.2rem;
+    border-bottom: 1px solid rgba(189, 192, 192,0.2);
+}
+
+.Header__name {
+    color: #fff;
+}
