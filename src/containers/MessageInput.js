@@ -6,7 +6,14 @@ import './MessageInput.css'
 const MessageInput = ({ user, message }) => {
     const state = store.getState();
     const { user_id } = user;
-    const { number, value } = message
+    let { number, value } = message
+    // if this is edit, remove the edited text
+    // once it is about to be edited
+    if (number){
+        if (value.includes('(edited)')){
+            value = value.split('(edited)')[0]
+        }
+    }
     const handleChange = e => {store.dispatch(setTypingValue({ number, userId: user_id, value: e.target.value }))}
     const handleSubmit = e => {
         e.preventDefault()

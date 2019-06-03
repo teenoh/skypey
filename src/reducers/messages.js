@@ -11,6 +11,13 @@ const messages = (state = getMessages(10), action) => {
       value = action.payload.value;
       userId = action.payload.userId;
       allUserMsgs = state[userId];
+      // if number is not null, then this is an edit
+      // add (edited) to the text if it doesn't already exist   
+      if (number){
+          if (!value.includes('(edited)')){
+              value += ' (edited)'
+          }
+      }
       const messageNumber = number || +_.keys(allUserMsgs).pop() + 1;
       return {
         ...state,
