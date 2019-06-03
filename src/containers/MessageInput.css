@@ -1,0 +1,15 @@
+.Message {
+    width: 80%;
+    margin: 1.6rem auto;
+}
+
+.Message__input {
+    width: 100%;
+    padding: 1.6rem;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    border: 0;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    outline: 0;
+}
